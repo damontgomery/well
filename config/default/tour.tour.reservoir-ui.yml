@@ -1,0 +1,91 @@
+uuid: e0e3816e-687f-4d02-9c2d-8b3162e9e787
+langcode: en
+status: true
+dependencies:
+  module:
+    - reservoir_ui
+_core:
+  default_config_hash: 3dlkiaQXvJlY1PANz7SznIsCA0JvRTn8Pw4uoxtgnAM
+id: reservoir-ui
+label: 'Using Reservoir'
+module: reservoir_ui
+routes:
+  -
+    route_name: system.admin_content
+tips:
+  reservoir-ui-welcome:
+    id: reservoir-ui-main
+    plugin: text
+    label: 'Welcome to Reservoir!'
+    body: 'Reservoir is a back end to power your front end.<br><br>Create content models, administer content, and expose it to clients via a <a href="http://jsonapi.org">JSON API</a>.<br><br>Powered by <a href="http://drupal.org/8">Drupal 8</a>!'
+    weight: 1
+  reservoir-ui-welcome-content:
+    id: reservoir-ui-welcome-content
+    plugin: text
+    label: 'Administering content'
+    body: 'The starting point whenever you log in to Reservoir. We''re there right now!<br><br><em>For users with the <q>Content administrator</q> role.</em>'
+    weight: 2
+    attributes:
+      data-class: 'toolbar-tab a[href*="/"]'
+  reservoir-ui-welcome-content-default:
+    id: reservoir-ui-welcome-content-default
+    plugin: text
+    label: 'Some content to start'
+    body: 'To help you get started, Reservoir created a "Hello world!" article for you.'
+    weight: 3
+    attributes:
+      data-class: 'block-system-main-block table tr:nth(1) td:nth(0)'
+  reservoir-ui-welcome-content-default-edit:
+    id: reservoir-ui-welcome-content-default-edit
+    plugin: text
+    label: 'Edit away!'
+    body: 'Feel free to edit it, to get a sense of what you could do. Or delete it, the choice is yours.'
+    weight: 4
+    attributes:
+      data-class: 'block-system-main-block table tr:nth(1) td:nth(5)'
+  reservoir-ui-welcome-api:
+    id: reservoir-ui-welcome-api
+    plugin: text
+    label: API
+    body: 'Explore the API that Reservoir is currently providing, to make your content & content models available for clients!<br><br>Including documentation and live demos.<br><br><em>For users with the <q>Client developer</q> role.</em>'
+    weight: 5
+    attributes:
+      data-class: 'toolbar-tab a[href*="/admin/api"]'
+  reservoir-ui-welcome-user1-warning:
+    id: reservoir-ui-welcome-user1-warning
+    plugin: text
+    label: 'With great power…'
+    body: 'Only user 1 (the all-powerful user!) can see what''s in the remainder of this tour…<br><br><em>That''s you!</em>'
+    weight: 6
+    attributes:
+      data-text: 'I can handle it 😎'
+  reservoir-ui-welcome-models:
+    id: reservoir-ui-welcome-models
+    plugin: text
+    label: 'Content modeling!'
+    body: 'Reservoir ships with an "Article" content model. You can create as many content models as you want for your needs!'
+    weight: 7
+    attributes:
+      data-class: 'toolbar-tab a[href*="/admin/models"]'
+  reservoir-ui-welcome-access-control:
+    id: reservoir-ui-welcome-access-control
+    plugin: text
+    label: 'Users, roles, permissions & OAuth2 clients'
+    body: 'Add more users, or even allow them to sign up themselves. Use roles to control what every user is allowed to see and do. Create OAuth2 clients that users can log in with.<br><br><em>By default, Reservoir provides <q>Content administrator</q> and <q>Client developer</q> roles.</em>'
+    weight: 8
+    attributes:
+      data-class: 'toolbar-tab a[href*="/access/users"]'
+  reservoir-ui-welcome-everything-else:
+    id: reservoir-ui-welcome-everything-else
+    plugin: text
+    label: 'Power of Drupal 8'
+    body: 'And if you want to, you can access the full Drupal 8 back end. Of course only user 1 can do this. Install extra modules, tweak Drupal internals — anything is possible!'
+    weight: 9
+    attributes:
+      data-class: 'toolbar-tab a.toolbar-icon-menu'
+  reservoir-ui-welcome-enjoy:
+    id: reservoir-ui-welcome-enjoy
+    plugin: text
+    label: Enjoy!
+    body: 'And send feedback, 👍 or 👎 !'
+    weight: 10

@@ -1,0 +1,15 @@
+uuid: ffc02995-bd8d-4918-b625-963d8ed81b68
+langcode: en
+status: true
+dependencies: {  }
+id: hero_editors
+label: 'Hero Editors'
+weight: 4
+is_admin: null
+permissions:
+  - 'create hero content'
+  - 'delete any hero content'
+  - 'delete hero revisions'
+  - 'edit any hero content'
+  - 'revert hero revisions'
+  - 'view hero revisions'
