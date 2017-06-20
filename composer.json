@@ -1,13 +1,15 @@
 {
-    "name": "acquia/blt-project",
-    "description": "Project template for Drupal 8 sites built with BLT.",
+    "name": "damontgomery/well",
+    "description": "Drupal site using Acquia Reservoir profile",
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "acquia/blt": "^8.3"
     },
-    "require-dev": {},
+    "require-dev": {
+        "geerlingguy/drupal-vm": "~4.3"
+    },
     "extra": {
         "enable-patching": true,
         "installer-paths": {
@@ -41,8 +43,7 @@
         },
         "merge-plugin": {
             "require": [
-                "vendor/acquia/blt/composer.required.json",
-                "vendor/acquia/blt/composer.suggested.json"
+                "vendor/acquia/blt/composer.required.json"
             ],
             "include": [
                 "blt/composer.overrides.json"
