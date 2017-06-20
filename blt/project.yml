@@ -1,9 +1,9 @@
 project:
   machine_name: well
-  prefix: BLT
-  human_name: 'BLTed 8'
+  prefix: WELL
+  human_name: Well
   profile:
-    name: lightning
+    name: reservoir
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.com'
@@ -38,18 +38,18 @@ target-hooks:
 import: null
 modules:
   local:
-    enable: [dblog, devel, seckit, views_ui]
-    uninstall: [acsf, acquia_connector, shield]
+    enable: [dblog, devel]
+    uninstall: {  }
   ci:
     enable: {  }
-    uninstall: [acquia_connector, shield]
+    uninstall: {  }
   dev:
-    enable: [acquia_connector, shield]
+    enable: {  }
     uninstall: {  }
   test:
-    enable: [acquia_connector, shield]
-    uninstall: [devel, views_ui]
+    enable: {  }
+    uninstall: {  }
   prod:
-    enable: [acquia_connector, shield]
-    uninstall: [devel, views_ui]
+    enable: {  }
+    uninstall: {  }
 
