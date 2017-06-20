@@ -4,6 +4,7 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
+  cors: 0
   datetime: 0
   dblog: 0
   devel: 0
