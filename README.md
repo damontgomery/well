@@ -19,7 +19,7 @@ Please see the [BLT documentation](http://blt.readthedocs.io/en/latest/) for inf
 # Quickstart
 ```
 # Clone the repository to your local machine.
-git clone git@github.com:damontgomery/well.git
+git clone git@github.com:damontgomery/well.git --branch develop
 
 # Go to the repository.
 cd well
