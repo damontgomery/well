@@ -57,3 +57,8 @@ blt setup
 # Log in to your site.
 drush @well.local uli
 ```
+
+## Create OAuth keys
+If you used BLT to install the site, like in the quickstart, you will have skipped the browser-based install step that creates OAuth keys.
+
+Once logged in, go to `admin/config/people/simple_oauth` and hit save to create the keys. It's also good to set the expiration time to something longer like 1h (3600) if you are doing development with Postman.
