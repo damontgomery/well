@@ -16,6 +16,27 @@ Please see the [BLT documentation](http://blt.readthedocs.io/en/latest/) for inf
 * Acquia Cloud subscription - link me!
 * TravisCI - link me!
 
+# Installation dependencies
+
+_Tested on OSX_
+
+- Install Composer globally on your local machine [https://getcomposer.org/](https://getcomposer.org/)
+- Install dependencies for Drupal VM, but do NOT install Drupal VM, [https://github.com/geerlingguy/drupal-vm#quick-start-guide](https://github.com/geerlingguy/drupal-vm#quick-start-guide)
+
+## Recommended Vagrant plugins
+see [https://www.vagrantup.com/docs/cli/plugin.html#plugin-install](https://www.vagrantup.com/docs/cli/plugin.html#plugin-install) 
+- vagrant-hostsupdater (creates nice names automatically for /etc/hosts)
+- vagrant-auto_network (allows Vagrant to pick an IP for you so there are no conflicts with other VMs)
+- vagrant-vbguest (help with ssh key management in case you connect to a server)
+
+```
+# Show plugins
+vagrant plugin list
+
+# Install plugins
+vagrant plugin install vagrant-hostsupdater vagrant-auto_network vagrant-vbguest
+```
+
 # Quickstart
 ```
 # Clone the repository to your local machine.
