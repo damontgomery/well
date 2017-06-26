@@ -59,6 +59,22 @@ drush @well.local uli
 ```
 
 ## Create OAuth keys
-If you used BLT to install the site, like in the quickstart, you will have skipped the browser-based install step that creates OAuth keys.
+See [Reservoir Quick Start Guide: Setting Up OAuth Keys](https://github.com/acquia/reservoir/wiki/Quick-Start-Guide#setting-up-oauth-keys)
 
-Once logged in, go to `admin/config/people/simple_oauth` and hit save to create the keys. It's also good to set the expiration time to something longer like 1h (3600) if you are doing development with Postman.
+# Extending well
+
+While not intended as a starting point for real sites, you might want to try out configuration management with Well. Well uses the Acquia BLT recommended method for configuration management which includes Drupal core configuration synchronization as well as Config Split.
+
+## Importing on site install
+
+When Acquia BLT is used to install the site, `blt local:setup`, the configuration in `/config/default` will be used. The configuration provided by the `develop` branch of Well contains the default configuration as it exists after running a normal Acquia BLT install. This however, provides a convenient way to see which additions and changes you are making when doing future exports.
+
+## Exporting configuration
+
+`drush @well.local cex --y`
+
+From here, you can use your Git to review the changes exported.
+
+## Importing configuration
+
+`drush @well.local cim --y`
