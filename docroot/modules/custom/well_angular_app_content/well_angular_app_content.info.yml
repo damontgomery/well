@@ -1,0 +1,5 @@
+name: Well Angular App Content
+type: module
+description: Provides default content used for the Angular App example.
+core: 8.x
+package: Well

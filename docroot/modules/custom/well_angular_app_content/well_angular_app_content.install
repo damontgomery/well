@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions.
+ */
+
+use Drupal\user\Entity\User;
+use Drupal\simple_oauth\Entity\Oauth2Client;
+
+/**
+ * Crete default user and client for Angular example.
+ */
+function well_angular_app_content_install() {
+  // Create default user.
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $user = User::create();
+
+  $user->setUsername('hero-editor');
+  $user->setPassword('password');
+  $user->addRole('hero_editor');
+  $user->set("langcode", $language);
+  $user->set("preferred_langcode", $language);
+  $user->set("preferred_admin_langcode", $language);
+  $user->activate();
+  $user->save();
+
+  // Create default client.
+  $client = Oauth2Client::create();
+
+  $client->set('label', 'Hero Angular App');
+  $client->setSecret('password');
+  $client->set('confidential', TRUE);
+  $client->set('roles', ['hero_editor']);
+  $client->save();
+}
