@@ -1,6 +1,6 @@
-access_token_expiration: 300
+access_token_expiration: 3600
 refresh_token_expiration: 1209600
 _core:
   default_config_hash: YJrGmZVEcxxUt1ffTwS_DybfKrbnRkwF1GXzPj-j7aE
-private_key: /tmp/7697fbc391cab9f1ef2343a374b998ed56562014.key
-public_key: /tmp/f8a864dc0c154d27a7941c97c9ef2cc7d90b1339.key
+private_key: /var/www/well/oauth/private.key
+public_key: /var/www/well/oauth/public.key
