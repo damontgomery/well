@@ -1,0 +1,17 @@
+uuid: 0d4a7103-6c25-429c-9d19-b0199fb70f21
+langcode: en
+status: true
+dependencies: {  }
+id: hero_editor
+label: 'Hero editor'
+weight: 4
+is_admin: null
+permissions:
+  - 'create hero content'
+  - 'delete any hero content'
+  - 'delete hero revisions'
+  - 'delete own hero content'
+  - 'edit any hero content'
+  - 'edit own hero content'
+  - 'revert hero revisions'
+  - 'view hero revisions'
