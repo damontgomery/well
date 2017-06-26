@@ -53,6 +53,11 @@
             "merge-extra-deep": true,
             "merge-scripts": true,
             "replace": true
+        },
+        "patches": {
+            "acquia/reservoir": {
+                "Don't install default content": "./patches/reservoir--no-default-content.patch"
+            }
         }
     }
 }
