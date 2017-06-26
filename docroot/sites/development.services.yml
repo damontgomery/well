@@ -11,3 +11,12 @@ parameters:
     debug: true
     auto_reload: true
     cache: false
+
+  cors.config:
+      enabled: true
+      # Allow 'Content-Type' and 'Authorization' headers.
+      allowedHeaders: ['content-type', 'authorization']
+      # Allow GET, POST, PATCH, DELETE, OPTIONS, etc..
+      allowedMethods: ['*']
+      # Allow access from a local web server running on port 3000.
+      allowedOrigins: ['http://localhost:3000']
