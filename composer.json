@@ -6,7 +6,7 @@
     "prefer-stable": true,
     "require": {
         "acquia/blt": "^8.3",
-        "acquia/reservoir": "^1.0@alpha"
+        "acquia/reservoir": "dev-8.x-1.x"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "~4.3"

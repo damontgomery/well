@@ -1,37 +1,11 @@
 diff --git a/reservoir.install b/reservoir.install
-index 9427b5c..e7aa17f 100644
+index 126a943..2608081 100644
 --- a/reservoir.install
 +++ b/reservoir.install
-@@ -45,64 +45,6 @@ function reservoir_install() {
-   else {
-     drupal_set_message('Could not automatically generate an initial public/private key pair to use for OAuth2 authentication. Until configuring this, OAuth2 authentication will not work.', 'warning');
-   }
--
--  // Create demo users & demo client.
--  User::create([])
--    ->setUsername('demo-user')
--    ->setPassword('demo-user')
--    ->activate()
--    ->save();
--  User::create([])
--    ->setUsername('demo-writer')
--    ->setPassword('demo-writer')
--    ->set('roles', ['content_administrator'])
--    ->activate()
--    ->save();
--  User::create([])
--    ->setUsername('demo-developer')
--    ->setPassword('demo-developer')
--    ->set('roles', ['client_developer'])
--    ->activate()
--    ->save();
--  Oauth2Client::create([
--    'owner_id' => 1,
--    'label' => 'Demo app',
--    'secret' => 'foobar',
--    'confidential' => TRUE,
--    'roles' => [],
--  ])->save();
+@@ -73,38 +73,6 @@ function reservoir_install() {
+       'client__own_articles',
+     ],
+   ])->save();
 -
 -  // Create default content.
 -  file_unmanaged_copy(\Drupal::root() . '/' . drupal_get_path('profile', 'reservoir') . '/reservoir-logo.png', 'public://reservoir-logo.png');
@@ -44,7 +18,7 @@ index 9427b5c..e7aa17f 100644
 -  $term->save();
 -  Node::create([
 -    'type' => 'article',
--    'field_body' => [
+-    'body' => [
 -      'value' => 'The name "llama" was adopted by European settlers from native Peruvians.',
 -      'format' => 'basic_html',
 -    ],
