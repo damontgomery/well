@@ -5,7 +5,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "^8.3",
+        "acquia/blt": "^8.9",
         "acquia/reservoir": "^1.0@alpha"
     },
     "require-dev": {

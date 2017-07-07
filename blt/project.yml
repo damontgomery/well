@@ -16,6 +16,22 @@ drush:
     local: self
     ci: self
   default_alias: '${drush.aliases.local}'
+modules:
+  local:
+    enable: [dblog, devel]
+    uninstall: {  }
+  ci:
+    enable: {  }
+    uninstall: {  }
+  dev:
+    enable: {  }
+    uninstall: {  }
+  test:
+    enable: {  }
+    uninstall: {  }
+  prod:
+    enable: {  }
+    uninstall: {  }
 target-hooks:
   frontend-setup:
     dir: '${docroot}'
@@ -35,21 +51,7 @@ target-hooks:
   post-deploy:
     dir: '${docroot}'
     command: 'echo ''No post-deploy build configured.'''
-import: null
-modules:
-  local:
-    enable: [dblog, devel]
-    uninstall: {  }
-  ci:
-    enable: {  }
-    uninstall: {  }
-  dev:
-    enable: {  }
-    uninstall: {  }
-  test:
-    enable: {  }
-    uninstall: {  }
-  prod:
-    enable: {  }
-    uninstall: {  }
-
+behat:
+  web-driver: selenium
+vm:
+  enable: true
