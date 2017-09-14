@@ -77,3 +77,7 @@ php_xdebug_remote_port: "9000"
 
 post_provision_scripts:
   - "../../../acquia/blt/scripts/drupal-vm/post-provision.sh"
+
+# Customizations
+vagrant_memory: 2048
+php_memory_limit: "512M"

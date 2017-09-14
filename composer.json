@@ -5,8 +5,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "^8.3",
-        "acquia/reservoir": "^1.0@alpha"
+        "acquia/blt": "^8.9",
+        "acquia/lightning": "^2.1.7",
+        "drupal/console": "~1.0"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "~4.3"
@@ -53,11 +54,6 @@
             "merge-extra-deep": true,
             "merge-scripts": true,
             "replace": true
-        },
-        "patches": {
-            "acquia/reservoir": {
-                "Don't install default content": "./patches/reservoir--no-default-content.patch"
-            }
         }
     }
 }

@@ -1,8 +1,8 @@
 # Well
 
-An Acquia Reservoir and Acquia BLT based project.
+An Acquia Lightning (Content API) and Acquia BLT based project.
 
-Acquia Reservoir is a service based Drupal 8 profile to power frontend frameworks.
+Acquia Lightning (Content API) is a service based Drupal 8 profile to power frontend frameworks.
 
 Acquia BLT is a local development and CI tool for Drupal based projects.
 
@@ -13,8 +13,6 @@ Please see the [BLT documentation](http://blt.readthedocs.io/en/latest/) for inf
 ## Resources
 
 * GitHub - [https://github.com/damontgomery/well](https://github.com/damontgomery/well)
-* Acquia Cloud subscription - link me!
-* TravisCI - link me!
 
 # Installation dependencies
 
@@ -78,3 +76,15 @@ From here, you can use your Git to review the changes exported.
 ## Importing configuration
 
 `drush @well.local cim --y`
+
+## Creating a Lightning sub profile
+
+The Well sub profile was created with Drupal Console and Acquia Lightning.
+
+```
+# Log in to the VM so Drupal Console is accessible.
+vagrant ssh
+
+# Use Drupal Console to create a sub profile.
+vendor/bin/drupal lightning:subprofile
+```
