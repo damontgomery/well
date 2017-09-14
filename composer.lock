@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "acquia/blt",
-            "version": "8.9.0-rc2",
+            "version": "8.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/blt.git",
-                "reference": "327103e70c3b73a490d45df7bf31f17bfec5b21a"
+                "reference": "fafe9c540ab91d61acfc96e2b00065342980e25b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/blt/zipball/327103e70c3b73a490d45df7bf31f17bfec5b21a",
-                "reference": "327103e70c3b73a490d45df7bf31f17bfec5b21a",
+                "url": "https://api.github.com/repos/acquia/blt/zipball/fafe9c540ab91d61acfc96e2b00065342980e25b",
+                "reference": "fafe9c540ab91d61acfc96e2b00065342980e25b",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
                 "template",
                 "testing"
             ],
-            "time": "2017-07-06T20:49:02+00:00"
+            "time": "2017-07-12T18:42:37+00:00"
         },
         {
             "name": "acquia/reservoir",
