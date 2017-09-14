@@ -1,11 +1,11 @@
-uuid: 97bf39b5-d454-44a3-97e0-dbc22220c21f
-name: Well
-mail: no-reply@acquia.com
+uuid: 9c1170c6-454f-4805-806e-a555d7f7381a
+name: Site-Install
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /home
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
