@@ -764,4 +764,4 @@ $settings['file_scan_ignore_directories'] = [
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
-$settings['install_profile'] = 'reservoir';
+$settings['install_profile'] = 'well';
