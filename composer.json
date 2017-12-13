@@ -1,19 +1,34 @@
 {
     "name": "damontgomery/well",
-    "description": "Drupal site using Acquia Reservoir profile",
+    "description": "Drupal site using Acquia Headless Lightning profile",
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "^8.9",
+        "acquia/blt": "^9.0",
         "acquia/lightning": "^2.1.7",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "acquia/headless_lightning": "dev-master"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "~4.3"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "extra": {
         "enable-patching": true,
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
@@ -36,8 +51,10 @@
             "docroot/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ],
-            "docroot/libraries/{$name}": [
-                "type:drupal-library"
+            "docroot/libraries/contrib/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"

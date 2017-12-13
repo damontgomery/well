@@ -18,7 +18,7 @@ drush:
   default_alias: '${drush.aliases.local}'
 modules:
   local:
-    enable: [dblog, devel]
+    enable: [dblog, devel, seckit, views_ui]
     uninstall: {  }
   ci:
     enable: {  }
@@ -53,5 +53,3 @@ target-hooks:
     command: 'echo ''No post-deploy build configured.'''
 behat:
   web-driver: selenium
-vm:
-  enable: true

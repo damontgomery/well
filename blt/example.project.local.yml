@@ -10,3 +10,5 @@
 #  aliases:
 #    local: local.mysite.dev
 environment: local
+vm:
+  enable: true
