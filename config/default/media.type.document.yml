@@ -1,0 +1,17 @@
+uuid: 4baa49b2-3bba-4cdf-9586-6551ac28b22f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YvaDPWRTYvcfZVJIh9mror4AbfYxCm6t2nIW1U4szL4
+id: document
+label: Document
+description: 'A locally hosted document, such a PDF.'
+source: file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_document
+field_map:
+  mime: field_mime_type
+  size: field_document_size
