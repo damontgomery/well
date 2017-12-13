@@ -3,10 +3,10 @@ vagrant_hostname: local.well.com
 vagrant_machine_name: well
 
 # Set the IP address so it doesn't conflict with other Drupal VM instances.
-vagrant_ip: 192.168.25.99
+vagrant_ip: 192.168.154.252
 
-# Use Ubuntu 14.04 LTS to more closely match Acquia Cloud environment.
-vagrant_box: geerlingguy/ubuntu1404
+# Use Ubuntu 16.04 LTS to match Acquia Cloud environments.
+vagrant_box: geerlingguy/ubuntu1604
 
 # Set drupal_site_name to the project's human-readable name.
 drupal_site_name: "Well"
@@ -25,7 +25,7 @@ drupal_build_composer_project: false
 drupal_build_composer: false
 drupal_composer_path: false
 drupal_composer_install_dir: "/var/www/well"
-drupal_core_path: "{{ drupal_composer_install_dir }}/docroot"
+drupal_core_path: "/var/www/well/docroot"
 ssh_home: /var/www/well
 
 drupal_db_user: drupal
@@ -41,10 +41,11 @@ drupal_install_site: false
 configure_drush_aliases: false
 
 # This is required for front-end building tools.
-nodejs_version: "4.x"
+nodejs_version: "6.x"
 nodejs_npm_global_packages:
   - name: bower
   - name: gulp-cli
+  - name: yarn
 nodejs_install_npm_user: "{{ drupalvm_user }}"
 npm_config_prefix: "/home/{{ drupalvm_user }}/.npm-global"
 installed_extras:
@@ -55,7 +56,7 @@ installed_extras:
   - selenium
   - xdebug
 
-# Use PHP 5.6.
+# PHP 5.6 (PHP 7.1 is being tested, see: https://docs.acquia.com/node/25726).
 php_version: "5.6"
 php_packages_extra:
   - "php{{ php_version }}-bz2"
@@ -74,10 +75,10 @@ php_xdebug_remote_connect_back: 1
 php_xdebug_idekey: PHPSTORM
 php_xdebug_max_nesting_level: 256
 php_xdebug_remote_port: "9000"
+php_memory_limit: "512M"
 
 post_provision_scripts:
   - "../../../acquia/blt/scripts/drupal-vm/post-provision.sh"
 
 # Customizations
 vagrant_memory: 2048
-php_memory_limit: "512M"
