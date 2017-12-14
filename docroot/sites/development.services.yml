@@ -4,9 +4,6 @@
 # 'example.settings.local.php' file, which sits next to this file.
 parameters:
   http.response.debug_cacheability_headers: true
-services:
-  cache.backend.null:
-    class: Drupal\Core\Cache\NullBackendFactory
 
   twig.config:
     debug: true
@@ -21,3 +18,7 @@ services:
       allowedMethods: ['*']
       # Allow access from a local web server running on port 3000.
       allowedOrigins: ['http://localhost:3000']
+
+services:
+  cache.backend.null:
+    class: Drupal\Core\Cache\NullBackendFactory
